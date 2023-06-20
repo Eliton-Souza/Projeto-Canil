@@ -16,8 +16,4 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 app.use(mainRouter);
 
-app.use((req: Request, res: Response)=>{
-    res.render("pages/404");
-})
-
 app.listen(port);
