@@ -6,6 +6,7 @@ import path from 'path';
 
 dotenv.config();
 const app= express();
+const port = process.env.PORT || 3000
 
 app.engine("mustache", mustache());
 app.set("view engine", "mustache");
@@ -19,4 +20,4 @@ app.use((req: Request, res: Response)=>{
     res.render("pages/404");
 })
 
-app.listen(process.env.PORT);
+app.listen(port);
